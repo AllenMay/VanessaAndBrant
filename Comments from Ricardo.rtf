@@ -1,0 +1,18 @@
+1. DONE: You're using 'vmax' for font sizing, nice! However, it doesn't scale down correctly. Try changing the unit from 'vmax' to 'vw', you'll see it works much better.
+
+2. The site displays well in small screens but it looks the same in large screens. The site need a 'large-screens' layout. Since you have more screen real estate in large screens, you can afford using a 2 columns layout, or even 3 if the content requires it.
+
+3. The images look quite blurry when enlarged. If you're practicing, try using the 'srcset' attribute and create 3 or 4 images that get served depending on the width of the viewport. I explain this in my book :)
+---- Wait! you are already using several images, you're using them as background images, why not just use 'srcset' then?
+
+4. Seems you're supporting IE8, is this necessary? If not, don't bother with yet another thing to worry about... Unless of course, you're using that for practice and all that.
+
+5. I recommend dropping the Google font and using Georgia italic. If the font was used across several pages, fine, but you're loading a whole character set to only use 9 letters. Dropping the Google font will save you one request which is a +1 for performance. Besides, Georgia is a very nice typeface.
+
+6. The page weighs 1.2MB at 1440px; 905KB at 935px; 655KB at 700px; 143KB at 450KB; -- but they all have 12 requests. I'm thinking you can trim page weight for the 1440, 935 and 700, which in turn may be able to help the smaller widths.
+
+7. On that note, try reducing the requests too?
+
+8. You might not need overflow-x: hidden; on the body.
+
+9. The picture doesn't have to be that big either, which in the end it saves file size (theoretically).
